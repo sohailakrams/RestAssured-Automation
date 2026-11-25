@@ -15,6 +15,8 @@ public class LoginTest extends BaseTest {
 		// Response response = given().when().get("/login");
 		// Response response = given().when().get("/login");
 
+		// Response response = given().when().get("/login");
+
 		Response response = given().when().get("/login");
 
 		Assert.assertEquals(response.getStatusCode(), 200, "Unexpected status code");
