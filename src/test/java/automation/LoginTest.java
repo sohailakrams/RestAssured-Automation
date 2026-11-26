@@ -18,7 +18,8 @@ public class LoginTest extends BaseTest {
 	@Test
 	public void getAllLogins() {
 		Response response = given().when().get(LOGIN_ENDPOINT);
-
+// logResponse(response);
+// logResponse(response);
 		logResponse(response);
 		validateResponse(response);
 	}
