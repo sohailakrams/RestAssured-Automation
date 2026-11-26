@@ -20,6 +20,10 @@ public class LoginTest extends BaseTest {
 		Response response = given().when().get(LOGIN_ENDPOINT);
 // logResponse(response);
 // logResponse(response);
+// logResponse(response);
+
+
+// logResponse(response);
 		logResponse(response);
 		validateResponse(response);
 	}
