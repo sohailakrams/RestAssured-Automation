@@ -44,6 +44,7 @@ public class TestListener implements ITestListener {
 	public void onFinish(ITestContext context) {
 
 		extent.flush();
+		ExtentTestManager.removeTest();
 
 		System.out.println("Execution Complete");
 	}
