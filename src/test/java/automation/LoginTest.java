@@ -16,6 +16,8 @@ public class LoginTest extends BaseTest {
 	private static final long MAX_RESPONSE_TIME_MS = 5000L;
 
 	@Test
+	@Test(description = "Verify that the login endpoint returns a successful response with valid data")
+	
 	public void getAllLogins() {
 		Response response = given().when().get(LOGIN_ENDPOINT);
 // logResponse(response);
