@@ -15,28 +15,11 @@ public class LoginTest extends BaseTest {
 	private static final int SUCCESS_STATUS_CODE = 200;
 	private static final long MAX_RESPONSE_TIME_MS = 5000L;
 
-	@Test
 	@Test(description = "Verify that the login endpoint returns a successful response with valid data")
-	
-	public void getAllLogins() {
+	public void verifyLoginEndpoint() {
 		Response response = given().when().get(LOGIN_ENDPOINT);
-// logResponse(response);
-// logResponse(response);
-// logResponse(response);
-// logResponse(response);
-
-// logResponse(response);
-		logResponse(response);@Test(description = "Verify that the login endpoint returns a successful response with valid data")
-public void verifyLoginEndpoint() {
-    Response response = given()
-            .when()
-            .get(LOGIN_ENDPOINT);
-
-    logResponse(response);
-    validateResponse(response);
-}
-
 		validateResponse(response);
+		logResponse(response);
 	}
 
 	private void validateResponse(Response response) {
@@ -45,7 +28,7 @@ public void verifyLoginEndpoint() {
 				SUCCESS_STATUS_CODE,
 				"Unexpected status code");
 		Assert.assertTrue(
-				response.getTime() < MAX_RESPONSE_TIME_MS,
+				response.getTime() <= MAX_RESPONSE_TIME_MS,
 				"Response time exceeded 5 seconds");
 		Assert.assertNotNull(
 				response.jsonPath().getString("[0].email"),
