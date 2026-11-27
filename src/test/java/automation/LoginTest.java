@@ -26,7 +26,16 @@ public class LoginTest extends BaseTest {
 // logResponse(response);
 
 // logResponse(response);
-		logResponse(response);
+		logResponse(response);@Test(description = "Verify that the login endpoint returns a successful response with valid data")
+public void verifyLoginEndpoint() {
+    Response response = given()
+            .when()
+            .get(LOGIN_ENDPOINT);
+
+    logResponse(response);
+    validateResponse(response);
+}
+
 		validateResponse(response);
 	}
 
